@@ -1,0 +1,164 @@
+{
+    "business": {
+        "name": "EcoFit Gym",
+        "colors": {
+            "primary": "#22c55e",
+            "secondary": "#14532d",
+            "accent": "#a3e635",
+            "background": "#ffffff",
+            "text": "#171717",
+            "muted": "#737373"
+        },
+        "contact": {
+            "email": "info@ecofit.com",
+            "phone": "+55 123 456 789",
+            "address": "Calle Verde 123, Ciudad Jardín"
+        },
+        "social": {
+            "instagram": "https://instagram.com/ecofit",
+            "facebook": "https://facebook.com/ecofit"
+        }
+    },
+    "sections": [
+        {
+            "key": "home",
+            "enabled": true,
+            "contentRef": {
+                "headline": "ENTRENA CON\nLA NATURALEZA",
+                "subheadline": "Tu gimnasio ecológico y sostenible para un cuerpo y mente sanos. Energía 100% renovable.",
+                "ctaText": "PLANES VERDES",
+                "ctaLink": "#pricing",
+                "backgroundImage": "/assets/img/hero-gym.jpg"
+            }
+        },
+        {
+            "key": "services",
+            "enabled": true,
+            "contentRef": {
+                "title": "NUESTROS SERVICIOS",
+                "subtitle": "Fitness Sostenible",
+                "ctaText": "AGENDA TU VISITA",
+                "ctaLink": "#contact",
+                "image": "/assets/img/services-gym.jpg",
+                "body": "Ofrecemos entrenamiento funcional al aire libre, yoga con luz natural y máquinas de cardio autogeneradoras de energía. Únete a la revolución verde del fitness con equipos de madera sostenible y zonas de calistenia integradas en el entorno."
+            }
+        },
+        {
+            "key": "classes",
+            "enabled": true,
+            "contentRef": {
+                "headline": "Clases Grupales",
+                "subheadline": "Horarios disponibles",
+                "classes": [
+                    {
+                        "name": "Yoga al Amanecer",
+                        "schedule": "Lun - Vie 06:00 AM",
+                        "instructor": "Ana Verde",
+                        "description": "Comienza tu día conectando con tu respiración y la luz natural."
+                    },
+                    {
+                        "name": "CrossFit Eco",
+                        "schedule": "Lun - Mié 07:00 PM",
+                        "instructor": "Carlos Roble",
+                        "description": "Alta intensidad utilizando elementos naturales."
+                    },
+                    {
+                        "name": "Pilates",
+                        "schedule": "Mar - Jue 09:00 AM",
+                        "instructor": "María Mar",
+                        "description": "Fortalecimiento del core con control y precisión."
+                    }
+                ]
+            }
+        },
+        {
+            "key": "pricing",
+            "enabled": true,
+            "contentRef": {
+                "headline": "Membresías",
+                "subheadline": "Invierte en ti",
+                "plans": [
+                    {
+                        "_id": "p1",
+                        "name": "Semilla",
+                        "price": "29",
+                        "currency": "$",
+                        "frequency": "/month",
+                        "features": [
+                            "Acceso Mañanas",
+                            "Clases de Yoga",
+                            "Duchas Ecológicas"
+                        ],
+                        "highlight": false,
+                        "ctaLink": "#contact"
+                    },
+                    {
+                        "_id": "p2",
+                        "name": "Bosque",
+                        "price": "49",
+                        "currency": "$",
+                        "frequency": "/month",
+                        "features": [
+                            "Acceso Ilimitado",
+                            "Todas las Clases",
+                            "Entrenador 1 vez/mes",
+                            "Toalla Incluida"
+                        ],
+                        "highlight": true,
+                        "ctaLink": "#contact"
+                    },
+                    {
+                        "_id": "p3",
+                        "name": "Selva",
+                        "price": "450",
+                        "currency": "$",
+                        "frequency": "/year",
+                        "features": [
+                            "Todo Incluido",
+                            "Nutricionista",
+                            "Parking Bici",
+                            "Merchandising Eco"
+                        ],
+                        "highlight": false,
+                        "ctaLink": "#contact"
+                    }
+                ]
+            }
+        },
+        {
+            "key": "gallery",
+            "enabled": true,
+            "contentRef": {
+                "headline": "NUESTRO ESPACIO",
+                "subheadline": "Instalaciones diseñadas para inspirar",
+                "images": [
+                    "/assets/img/gallery-1.jpg",
+                    "/assets/img/gallery-2.jpg",
+                    "/assets/img/gallery-3.jpg",
+                    "/assets/img/gallery-4.jpg"
+                ]
+            }
+        },
+        {
+            "key": "about",
+            "enabled": true,
+            "contentRef": {
+                "title": "NUESTRA MISIÓN",
+                "subtitle": "Salud personal, salud planetaria",
+                "image": "/assets/img/about-gym.jpg",
+                "body": "Nacimos con la idea de que cuidar de uno mismo no debería costar el planeta. EcoFit es el primer gimnasio carbono neutral de la región, utilizando paneles solares y recolección de agua de lluvia."
+            }
+        },
+        {
+            "key": "contact",
+            "enabled": true,
+            "contentRef": {
+                "headline": "Únete al cambio",
+                "email": "hola@ecofitgym.com",
+                "phone": "+34 912 345 678",
+                "address": "Av. de la Sostenibilidad 42, Madrid",
+                "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194348.139810619!2d-3.8196207!3d40.4378698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1645000000000!5m2!1sen!2sus"
+            }
+        }
+    ]
+}
