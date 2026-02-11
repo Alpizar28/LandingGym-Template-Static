@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: PageProps) {
 
     return {
         title: config.business.name || 'Gym Demo',
-        description: config.sections.find((s: SectionConfig) => s.key === 'home')?.contentRef?.subheadline || 'Welcome',
+        description: (config.sections.find((s: SectionConfig) => s.key === 'home')?.contentRef as any)?.subheadline || 'Welcome',
     };
 }
 
