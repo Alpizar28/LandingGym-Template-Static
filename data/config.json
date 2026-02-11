@@ -79,7 +79,7 @@
                 "subheadline": "Elige el plan que se ajuste a tus objetivos",
                 "plans": [
                     {
-                        "_id": "p1",
+                        "id": "p1",
                         "name": "Plan Básico",
                         "price": "30",
                         "currency": "$",
@@ -93,7 +93,7 @@
                         "ctaLink": "#contact"
                     },
                     {
-                        "_id": "p2",
+                        "id": "p2",
                         "name": "Plan Pro",
                         "price": "50",
                         "currency": "$",
@@ -107,7 +107,7 @@
                         "ctaLink": "#contact"
                     },
                     {
-                        "_id": "p3",
+                        "id": "p3",
                         "name": "Plan Anual",
                         "price": "500",
                         "currency": "$",

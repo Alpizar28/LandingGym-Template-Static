@@ -2,34 +2,20 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { HeroContent } from '@/types/config';
 
 interface HeroProps {
-    content?: {
-        headline?: string;
-        subheadline?: string;
-        backgroundImage?: string; // Changed from any
-        ctaText?: string;
-        ctaLink?: string;
-    }
+    content: HeroContent;
 }
 
 export default function Hero({ content }: HeroProps) {
     const {
-        headline: rawHeadline,
-        subheadline: rawSubheadline,
+        headline = "TRANSFORMA TU CUERPO, TRANSFORMA TU VIDA",
+        subheadline = "Entrenamiento profesional, equipamiento de última generación y una comunidad que apoya tus objetivos.",
         backgroundImage,
-        ctaText: rawCtaText,
-        ctaLink: rawCtaLink
+        ctaText = "EMPIEZA GRATIS",
+        ctaLink = "#contact"
     } = content || {};
-
-    const headline = rawHeadline ?? "TRANSFORMA TU CUERPO, TRANSFORMA TU VIDA";
-    const subheadline = rawSubheadline ?? "Entrenamiento profesional, equipamiento de última generación y una comunidad que apoya tus objetivos.";
-    const ctaText = rawCtaText ?? "EMPIEZA GRATIS";
-    const ctaLink = rawCtaLink ?? "#contact";
-
-    // Placeholder image logic for Phase 1
-    const bgImage = backgroundImage || null;
-
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -54,14 +40,14 @@ export default function Hero({ content }: HeroProps) {
     return (
         <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-black text-white">
             {/* Background Image */}
-            {bgImage && (
+            {backgroundImage && (
                 <div className="absolute inset-0 z-0">
                     <motion.div
                         initial={{ scale: 1.1 }}
                         animate={{ scale: 1.0 }}
                         transition={{ duration: 10, ease: "easeOut" }}
                         className="w-full h-full bg-cover bg-center bg-no-repeat"
-                        style={{ backgroundImage: `url(${bgImage})` }}
+                        style={{ backgroundImage: `url(${backgroundImage})` }}
                     />
                 </div>
             )}
@@ -92,7 +78,7 @@ export default function Hero({ content }: HeroProps) {
                     variants={itemVariants}
                     className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-[0.9] tracking-tighter uppercase font-heading drop-shadow-2xl"
                 >
-                    {headline.split('\n').map((line, i) => (
+                    {headline && headline.split('\n').map((line, i) => (
                         <span key={i} className="block">{line}</span>
                     ))}
                 </motion.h1>
@@ -114,7 +100,7 @@ export default function Hero({ content }: HeroProps) {
                     className="flex flex-col sm:flex-row gap-6 justify-center items-center"
                 >
                     <Link
-                        href={ctaLink || "#contact"}
+                        href={ctaLink}
                         target={ctaLink?.startsWith('http') ? '_blank' : undefined}
                         rel={ctaLink?.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="group relative px-10 py-5 bg-primary overflow-hidden rounded-full font-black text-white shadow-[0_0_20px_rgba(var(--brand-primary-rgb),0.5)] hover:shadow-[0_0_40px_rgba(var(--brand-primary-rgb),0.7)] transition-all transform hover:-translate-y-1"

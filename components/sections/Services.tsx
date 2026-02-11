@@ -1,18 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { toPlainText } from '@/lib/utils';
-
+import { ServicesContent } from '@/types/config';
+import Image from 'next/image';
 
 interface ServicesProps {
-    content?: {
-        title?: string;
-        subtitle?: string;
-        body?: any; // Changed from any[]
-        image?: string; // Changed from any
-        ctaText?: string;
-        ctaLink?: string;
-    }
+    content: ServicesContent;
 }
 
 export default function Services({ content }: ServicesProps) {
@@ -24,10 +17,6 @@ export default function Services({ content }: ServicesProps) {
         ctaText,
         ctaLink
     } = content || {};
-
-    const imageUrl = image || null;
-    const bodyText = toPlainText(body);
-
 
     return (
         <section id="services" className="py-24 bg-zinc-900 border-t border-white/5">
@@ -45,7 +34,7 @@ export default function Services({ content }: ServicesProps) {
                     </motion.div>
                 </div>
 
-                {imageUrl && (
+                {image && (
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -54,16 +43,16 @@ export default function Services({ content }: ServicesProps) {
                     >
                         <div
                             className="absolute inset-0 bg-cover bg-center"
-                            style={{ backgroundImage: `url(${imageUrl})` }}
+                            style={{ backgroundImage: `url(${image})` }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     </motion.div>
                 )}
 
                 <div className="grid lg:grid-cols-1 gap-12 max-w-3xl mx-auto">
-                    {bodyText && (
+                    {body && (
                         <div className="prose prose-xl prose-invert mx-auto text-gray-400 text-center leading-relaxed">
-                            {bodyText.split('\n\n').map((p, i) => <p key={i}>{p}</p>)}
+                            <p>{body}</p>
                         </div>
                     )}
 

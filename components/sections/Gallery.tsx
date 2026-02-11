@@ -1,17 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-
-
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { GalleryContent } from '@/types/config';
 
 interface GalleryProps {
-    content?: {
-        headline?: string;
-        subheadline?: string;
-        images?: any[];
-    }
+    content: GalleryContent;
 }
 
 export default function Gallery({ content }: GalleryProps) {
@@ -50,9 +45,7 @@ export default function Gallery({ content }: GalleryProps) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
                     {images.map((image, index) => {
                         if (!image) return null; // Safety check
-                        // Placeholder URL logic
-                        const imageUrl = typeof image === 'string' ? image : null;
-                        if (!imageUrl) return null;
+
                         // Make some images span 2 columns or rows for a masonry feel
                         const isLarge = index % 5 === 0;
                         const isWide = index % 5 === 3;
@@ -68,11 +61,11 @@ export default function Gallery({ content }: GalleryProps) {
                                     ${isLarge ? 'md:col-span-2 md:row-span-2' : ''}
                                     ${isWide ? 'md:col-span-2' : ''}
                                 `}
-                                onClick={() => setSelectedImage(imageUrl)}
+                                onClick={() => setSelectedImage(image)}
                             >
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                                    style={{ backgroundImage: `url(${imageUrl})` }}
+                                    style={{ backgroundImage: `url(${image})` }}
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                             </motion.div>
@@ -93,7 +86,10 @@ export default function Gallery({ content }: GalleryProps) {
                     >
                         <button
                             className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
-                            onClick={() => setSelectedImage(null)}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedImage(null);
+                            }}
                         >
                             <X size={40} />
                         </button>

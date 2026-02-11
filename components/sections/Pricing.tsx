@@ -2,13 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { PricingContent } from '@/types/config';
 
 interface PricingProps {
-    content?: {
-        headline?: string;
-        subheadline?: string;
-        plans?: any[];
-    };
+    content: PricingContent;
 }
 
 export default function Pricing({ content }: PricingProps) {
@@ -41,7 +38,7 @@ export default function Pricing({ content }: PricingProps) {
                 <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                     {plans.map((plan, index) => (
                         <motion.div
-                            key={plan._id || index}
+                            key={plan.id || index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}

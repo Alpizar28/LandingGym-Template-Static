@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import ThemeInjector from '@/lib/theme-injector';
+import './globals.css';
 import configData from '@/data/config.json';
 import { ConfigData } from '@/types/config';
 

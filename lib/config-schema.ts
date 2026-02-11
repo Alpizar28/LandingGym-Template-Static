@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-// Helper for generic body content (string or array for now)
-const bodySchema = z.union([z.string(), z.array(z.any())]).optional();
+// Helper for generic body content
+const bodySchema = z.string().optional();
 
 export const HeroContentSchema = z.object({
     headline: z.string().optional(),
@@ -21,7 +21,7 @@ export const ServicesContentSchema = z.object({
 });
 
 export const PlanSchema = z.object({
-    _id: z.string().optional(),
+    id: z.string().optional(),
     name: z.string(),
     price: z.string(),
     currency: z.string(),

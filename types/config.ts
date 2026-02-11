@@ -1,5 +1,4 @@
 // Section Content Interfaces
-// Section Content Interfaces
 export interface HeroContent {
     headline?: string;
     subheadline?: string;
@@ -11,14 +10,14 @@ export interface HeroContent {
 export interface ServicesContent {
     title?: string;
     subtitle?: string;
-    body?: any; // String or PortableText
+    body?: string;
     image?: string;
     ctaText?: string;
     ctaLink?: string;
 }
 
 export interface Plan {
-    _id: string; // Keep compatibility or use id
+    id: string;
     name: string;
     price: string;
     currency: string;
@@ -43,7 +42,7 @@ export interface GalleryContent {
 export interface AboutContent {
     title?: string;
     subtitle?: string;
-    body?: any;
+    body?: string;
     image?: string;
 }
 
@@ -65,14 +64,14 @@ export interface ContactContent {
     email?: string;
     phone?: string;
     address?: string;
-    mapEmbedUrl?: string; // Optional iframe src
-    formActionUrl?: string; // Endpoint for form submission (e.g. Formspree)
+    mapEmbedUrl?: string;
+    formActionUrl?: string;
 }
 
 export interface GenericContent {
     title?: string;
     subtitle?: string;
-    body?: any;
+    body?: string;
 }
 
 // Discriminator for Section Config
