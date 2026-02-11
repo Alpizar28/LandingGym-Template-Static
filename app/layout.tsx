@@ -26,6 +26,10 @@ export default function RootLayout({
         style={{
           '--primary': config.business.colors.primary,
           '--secondary': config.business.colors.secondary,
+          '--accent': config.business.colors.accent,
+          '--muted': config.business.colors.muted,
+          '--foreground': config.business.colors.text,
+          '--background': config.business.colors.background,
         } as React.CSSProperties}
       >
         {/* We keep ThemeInjector if it does something useful, or remove it if replaced by inline styles */}

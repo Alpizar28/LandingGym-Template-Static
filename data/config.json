@@ -1,22 +1,22 @@
 {
     "business": {
-        "name": "EcoFit Gym",
+        "name": "Cardio Kickboxing Tamarindo",
         "colors": {
-            "primary": "#22c55e",
-            "secondary": "#14532d",
-            "accent": "#a3e635",
+            "primary": "#f9f585",
+            "secondary": "#f4e04d",
+            "accent": "#ddbe00",
             "background": "#ffffff",
-            "text": "#171717",
-            "muted": "#737373"
+            "text": "#0F172A",
+            "muted": "#94A3B8"
         },
         "contact": {
-            "email": "info@ecofit.com",
-            "phone": "+55 123 456 789",
-            "address": "Calle Verde 123, Ciudad Jardín"
+            "email": "info@cardiokickboxingtamarindo.com",
+            "phone": "+50687022925",
+            "address": "C. Palma 300, Provincia de Guanacaste, Tamarindo, 50309, Costa Rica"
         },
         "social": {
-            "instagram": "https://instagram.com/ecofit",
-            "facebook": "https://facebook.com/ecofit"
+            "instagram": "@cardiokickboxingtamarindo",
+            "facebook": "/CardioKickboxingTamarindo"
         }
     },
     "sections": [
@@ -24,9 +24,9 @@
             "key": "home",
             "enabled": true,
             "contentRef": {
-                "headline": "ENTRENA CON\nLA NATURALEZA",
-                "subheadline": "Tu gimnasio ecológico y sostenible para un cuerpo y mente sanos. Energía 100% renovable.",
-                "ctaText": "PLANES VERDES",
+                "headline": "Transforma tu Cuerpo y Mente",
+                "subheadline": "Únete a nuestra comunidad de kickboxing y mejora tu bienestar",
+                "ctaText": "Descubre nuestras Membresías",
                 "ctaLink": "#pricing",
                 "backgroundImage": "/assets/img/hero-gym.jpg"
             }
@@ -36,11 +36,11 @@
             "enabled": true,
             "contentRef": {
                 "title": "NUESTROS SERVICIOS",
-                "subtitle": "Fitness Sostenible",
-                "ctaText": "AGENDA TU VISITA",
+                "subtitle": "Kickboxing energético para un estilo de vida activo",
+                "ctaText": "Regístrate Ahora",
                 "ctaLink": "#contact",
                 "image": "/assets/img/services-gym.jpg",
-                "body": "Ofrecemos entrenamiento funcional al aire libre, yoga con luz natural y máquinas de cardio autogeneradoras de energía. Únete a la revolución verde del fitness con equipos de madera sostenible y zonas de calistenia integradas en el entorno."
+                "body": "Te ofrecemos entrenamientos diseñados para fortalecer tu cuerpo y mente, asegurando que te sientas fuerte y empoderado en cada sesión."
             }
         },
         {
@@ -51,22 +51,22 @@
                 "subheadline": "Horarios disponibles",
                 "classes": [
                     {
-                        "name": "Yoga al Amanecer",
-                        "schedule": "Lun - Vie 06:00 AM",
-                        "instructor": "Ana Verde",
-                        "description": "Comienza tu día conectando con tu respiración y la luz natural."
+                        "name": "Kickboxing Energético",
+                        "schedule": "Martes a las 4:00 PM",
+                        "instructor": "Juan Pérez",
+                        "description": "Una clase intensa que combina kickboxing y ejercicios cardiovasculares."
                     },
                     {
-                        "name": "CrossFit Eco",
-                        "schedule": "Lun - Mié 07:00 PM",
-                        "instructor": "Carlos Roble",
-                        "description": "Alta intensidad utilizando elementos naturales."
+                        "name": "Defensa Personal",
+                        "schedule": "Jueves a las 4:00 PM",
+                        "instructor": "María Gómez",
+                        "description": "Aprende técnicas de defensa personal mientras te mantienes en forma."
                     },
                     {
-                        "name": "Pilates",
-                        "schedule": "Mar - Jue 09:00 AM",
-                        "instructor": "María Mar",
-                        "description": "Fortalecimiento del core con control y precisión."
+                        "name": "Circuito de Fuerza",
+                        "schedule": "Sábado a las 10:00 AM",
+                        "instructor": "Carlos Sánchez",
+                        "description": "Mejora tu fuerza y resistencia con nuestro circuito especializado."
                     }
                 ]
             }
@@ -76,48 +76,46 @@
             "enabled": true,
             "contentRef": {
                 "headline": "Membresías",
-                "subheadline": "Invierte en ti",
+                "subheadline": "Elige el plan que se ajuste a tus objetivos",
                 "plans": [
                     {
                         "_id": "p1",
-                        "name": "Semilla",
-                        "price": "29",
+                        "name": "Plan Básico",
+                        "price": "30",
                         "currency": "$",
                         "frequency": "/month",
                         "features": [
-                            "Acceso Mañanas",
-                            "Clases de Yoga",
-                            "Duchas Ecológicas"
+                            "Acceso a todas las clases",
+                            "Acceso a materiales online",
+                            "Soporte vía email"
                         ],
                         "highlight": false,
                         "ctaLink": "#contact"
                     },
                     {
                         "_id": "p2",
-                        "name": "Bosque",
-                        "price": "49",
+                        "name": "Plan Pro",
+                        "price": "50",
                         "currency": "$",
                         "frequency": "/month",
                         "features": [
-                            "Acceso Ilimitado",
-                            "Todas las Clases",
-                            "Entrenador 1 vez/mes",
-                            "Toalla Incluida"
+                            "Acceso a todas las clases",
+                            "Sesiones de entrenamiento personalizadas",
+                            "Acceso VIP a eventos"
                         ],
                         "highlight": true,
                         "ctaLink": "#contact"
                     },
                     {
                         "_id": "p3",
-                        "name": "Selva",
-                        "price": "450",
+                        "name": "Plan Anual",
+                        "price": "500",
                         "currency": "$",
                         "frequency": "/year",
                         "features": [
-                            "Todo Incluido",
-                            "Nutricionista",
-                            "Parking Bici",
-                            "Merchandising Eco"
+                            "Acceso ilimitado a clases",
+                            "Entrenamientos 1 a 1 mensuales",
+                            "Descuento en la tienda"
                         ],
                         "highlight": false,
                         "ctaLink": "#contact"
@@ -130,7 +128,7 @@
             "enabled": true,
             "contentRef": {
                 "headline": "NUESTRO ESPACIO",
-                "subheadline": "Instalaciones diseñadas para inspirar",
+                "subheadline": "Instalaciones de primera clase para tu entrenamiento",
                 "images": [
                     "/assets/img/gallery-1.jpg",
                     "/assets/img/gallery-2.jpg",
@@ -144,20 +142,21 @@
             "enabled": true,
             "contentRef": {
                 "title": "NUESTRA MISIÓN",
-                "subtitle": "Salud personal, salud planetaria",
+                "subtitle": "Promoviendo el bienestar a través del kickboxing",
                 "image": "/assets/img/about-gym.jpg",
-                "body": "Nacimos con la idea de que cuidar de uno mismo no debería costar el planeta. EcoFit es el primer gimnasio carbono neutral de la región, utilizando paneles solares y recolección de agua de lluvia."
+                "body": "En Cardio Kickboxing Tamarindo, nos dedicamos a fomentar un estilo de vida saludable y activo, ayudándote a lograr tus metas de bienestar mientras disfrutas de cada entrenamiento."
             }
         },
         {
             "key": "contact",
             "enabled": true,
             "contentRef": {
-                "headline": "Únete al cambio",
-                "email": "hola@ecofitgym.com",
-                "phone": "+34 912 345 678",
-                "address": "Av. de la Sostenibilidad 42, Madrid",
-                "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194348.139810619!2d-3.8196207!3d40.4378698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1645000000000!5m2!1sen!2sus"
+                "headline": "CONTÁCTANOS",
+                "email": "info@cardiokickboxingtamarindo.com",
+                "phone": "+50687022925",
+                "address": "C. Palma 300, Provincia de Guanacaste, Tamarindo, 50309, Costa Rica",
+                "formActionUrl": "https://formspree.io/f/your_form_id",
+                "mapEmbedUrl": "https://www.google.com/maps/embed/v1/place?q=C.%20Palma%20300%2C%20Provincia%20de%20Guanacaste%2C%20Tamarindo%2C%2050309%2C%20Costa%20Rica&key=YOUR_API_KEY"
             }
         }
     ]

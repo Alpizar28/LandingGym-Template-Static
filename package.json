@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prebuild": "npx tsx scripts/validate-config.ts",
     "build:hostinger": "set EXPORT_MODE=true && next build",
     "start": "next start",
     "lint": "eslint"
@@ -14,6 +15,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@hookform/resolvers": "^5.2.2",
+    "@supabase/supabase-js": "^2.95.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.33.0",
     "lucide-react": "^0.563.0",
@@ -36,6 +38,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

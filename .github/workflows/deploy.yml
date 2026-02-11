@@ -1,4 +1,4 @@
-name: 🚀 Deploy to Hostinger
+name: Deploy to Hostinger (FTP)
 
 on:
   push:
@@ -13,27 +13,30 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: 🟢 Setup Node.js 20
+      - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
       - name: 📦 Install Dependencies
-        run: npm ci --legacy-peer-deps
+        run: npm ci
+
+      - name: 🔍 Validate Config
+        run: npx tsx scripts/validate-config.ts
 
       - name: 🏗️ Build Project (Static Export)
         run: npm run build:hostinger
         env:
-          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
-          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+          EXPORT_MODE: true
 
-      - name: 📂 Sync files to Hostinger
+      - name: 📂 Sync files (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          # Hostinger usually requires uploading to public_html
+          server-dir: ./public_html/
           local-dir: ./out/
-          server-dir: ./public_html/       # OJO: Cambiar si tu carpeta en Hostinger es distinta
-          dangerous-clean-slate: true      # Borra lo viejo para dejar solo lo nuevo (cuidado con otros archivos en public_html)
+          dangerous-clean-slate: true # WARNING: Deletes remote files not in local

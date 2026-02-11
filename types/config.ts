@@ -66,6 +66,7 @@ export interface ContactContent {
     phone?: string;
     address?: string;
     mapEmbedUrl?: string; // Optional iframe src
+    formActionUrl?: string; // Endpoint for form submission (e.g. Formspree)
 }
 
 export interface GenericContent {
